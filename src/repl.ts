@@ -2,8 +2,6 @@ import readline from "readline";
 import { commandMap } from "./command_map.js";
 import type { State } from "./state.js";
 import { initState } from "./state.js";
-
-// تنظيف الإدخال
 export function cleanInput(input: string): string {
   return input
     .trim()
@@ -11,8 +9,6 @@ export function cleanInput(input: string): string {
     .split(/\s+/)
     .join(",");
 }
-
-// تشغيل REPL
 export function startREPL() {
   const rl = readline.createInterface({
     input: process.stdin,
